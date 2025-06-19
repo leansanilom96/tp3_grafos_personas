@@ -137,21 +137,6 @@ public class Grafo<T> implements IGrafo<T> {
         }
         System.out.println();
     }
-
-    @Override
-    public int[][] getMatrizAdyacencia() {
-        int size = nodos.size();
-        int[][] matriz = new int[size][size];
-        List<T> indices = new ArrayList<>(nodos.keySet());
-
-        for (int i = 0; i < size; i++) {
-            INodoGrafo<T> nodo = nodos.get(indices.get(i));
-            for (INodoGrafo<T> vecino : nodo.getVecinos()) {
-                int j = indices.indexOf(vecino.getValor());
-                matriz[i][j] = 1;
-            }
-        }
-
-        return matriz;
-    }
 }
+
+ 

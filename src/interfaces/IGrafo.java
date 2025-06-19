@@ -10,8 +10,7 @@ public interface IGrafo<T> {
     void recorrerDFS(T inicio);
     void recorrerBFS(T inicio);
 
-    int[][] getMatrizAdyacencia();
-
+   
     void setDirigido(boolean dirigido);
     boolean esDirigido();
 }
